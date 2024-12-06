@@ -1,0 +1,25 @@
+########################################################################
+# VSCode
+########################################################################
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+
+.swc/
+
+########################################################################
+# Streamlit
+########################################################################
+.streamlit/
+!e2e_playwright/.streamlit/
+lib/streamlit/static
+streamlit-storage
+
+# Pyenv / uv Stuff
+.python-version
+venv
+.venv
+
+################### environment variables 
+.env 
+venv
