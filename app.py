@@ -30,7 +30,7 @@ def generate_gemini_content(transcript_text, prompt):
     except Exception as e:
         st.error(f"Error generating summary: {e}")
         return None
-st.title("YouTube Video Summarizer")
+st.title("GEN-AI YouTube Video Summarizer")
 youtube_link = st.text_input("Enter the YouTube Video URL:")
 
 if youtube_link:
