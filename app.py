@@ -8,11 +8,20 @@ genai.configure(api_key=os.getenv("GOOGLE_KEY"))
 
 def get_prompt(video_title):
     return f"""
-    You are tasked with providing an in-depth analysis of the video titled: '{video_title}'.
-    Your goal is to generate a comprehensive summary that captures the main points, key arguments,
-    and supporting details within a 750-word limit. Please thoroughly analyze the transcript text
-    provided and offer a detailed summary, ensuring to cover all relevant aspects of the video:
-    """
+You are tasked with providing a detailed and insightful analysis of the video titled: '{video_title}'.
+Your goal is to generate a comprehensive summary of the content, capturing the main points, key arguments,
+important details, and any conclusions or recommendations made in the video. The summary should not exceed 750 words.
+
+Please ensure that your analysis covers the following:
+
+1. **Main Idea**: Provide a concise overview of the video’s core message or topic.
+2. **Key Points**: Identify the most significant points and arguments presented.
+3. **Supporting Details**: Highlight examples, statistics, or explanations that support the main points.
+4. **Insights and Analysis**: Offer deeper insights into the video's content, discussing implications or connections to broader topics, if relevant.
+5. **Conclusion/Recommendations**: Summarize any conclusions or actionable recommendations made in the video.
+
+The summary should be structured, clear, and informative, offering a well-rounded perspective on the video’s content while remaining within the 750-word limit.
+"""
 def extract_transcript_details(youtube_video_url):
     try:
         video_id = youtube_video_url.split("v=")[1]
